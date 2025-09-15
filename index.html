@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mubarak Ceramics</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+<!-- Your custom styles -->
+<link rel="stylesheet" href="./style.css">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="./style.css">
+  <style>
+    /* ---------------- Sidebar ---------------- */
+    #sidebarMenu {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100%;
+      background: #212529;
+      transition: right 0.3s ease-in-out;
+      z-index: 1050;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    #sidebarMenu.show {
+      right: 0;
+    }
+    .sidebar-close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    /* ---------------- Navbar ---------------- */
+    .navbar-toggler {
+      position: relative;
+      width: 35px;
+      height: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: none;
+      background: transparent;
+      padding: 0;
+      cursor: pointer;
+    }
+    .toggler-bar {
+      width: 100%;
+      height: 3px;
+      background-color: white;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    .navbar-toggler[aria-expanded="true"] .toggler-bar:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .navbar-toggler[aria-expanded="true"] .toggler-bar:nth-child(2) {
+      opacity: 0;
+    }
+    .navbar-toggler[aria-expanded="true"] .toggler-bar:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* ---------------- Brand Logo ---------------- */
+    .brand-logo {
+      height: 100px;
+      width: auto;
+      object-fit: contain;
+    }
+    .brand-name {
+      font-size: 2.25rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    @media (max-width: 768px) {
+      .brand-logo { height: 35px; }
+      .brand-name { font-size: 1rem; }
+    }
+
+    /* ---------------- Swiper Icons ---------------- */
+    .iconSwiperContainer {
+      width: 100%;
+      padding: 10px 0;
+      background: #025cb6;
+    }
+    .iconSlide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .iconBox {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .iconImage {
+      height: 60px;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
+    .iconBox:hover .iconImage {
+      transform: scale(1.1);
+    }
+    .iconLabel {
+      margin-top: 5px;
+      font-size: 14px;
+      color: #fff;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      .iconImage { height: 45px; }
+      .iconLabel { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="collapse" id="sidebarMenu">
+    <div class="p-4 text-white position-relative">
+      <span class="sidebar-close" data-bs-toggle="collapse" data-bs-target="#sidebarMenu">&times;</span>
+      <h5 class="h4">Mubarak Ceramics & Granite</h5>
+      <hr class="bg-light">
+      <a href="#" class="d-block text-white">Home</a>
+      <a href="#" class="d-block text-white">About</a>
+      <a href="#" class="d-block text-white">Contact</a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <a class="navbar-brand d-flex align-items-center fw-bold text-white" href="#">
+        <img src="./images/image-2.png" alt="Logo" class="me-2 brand-logo">
+        <span class="brand-name">Mubarak Group</span>
+      </a>
+
+       <a href="#contact" class="btn btn-primary">Get Quote</a>
+      <!-- <button class="navbar-toggler border-0" type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#sidebarMenu"
+              aria-controls="sidebarMenu"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="toggler-bar"></span>
+        <span class="toggler-bar"></span>
+        <span class="toggler-bar"></span>
+      </button> -->
+    </div>
+  </nav>
+
+  <!-- Swiper Icons -->
+  <!-- <div class="swiper iconSwiperContainer">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide iconSlide">
+        <div class="iconBox"><img src="./images/icons/tiles.png" class="iconImage"><span class="iconLabel">Tiles</span></div>
+      </div>
+      <div class="swiper-slide iconSlide">
+        <div class="iconBox"><img src="./images/icons/kitchen.png" class="iconImage"><span class="iconLabel">Kitchen</span></div>
+      </div>
+      <div class="swiper-slide iconSlide">
+        <div class="iconBox"><img src="./images/icons/fitting.png" class="iconImage"><span class="iconLabel">Fittings</span></div>
+      </div>
+      <div class="swiper-slide iconSlide">
+        <div class="iconBox"><img src="./images/icons/bathroom.jpg" class="iconImage"><span class="iconLabel">bathroom</span></div>
+      </div>
+      <div class="swiper-slide iconSlide">
+        <div class="iconBox"><img src="./images/icons/mirror.jpeg" class="iconImage"><span class="iconLabel">Mirror</span></div>
+      </div>
+      <!-- duplicate slides for seamless loop -->
+      <!-- <div class="swiper-slide iconSlide">
+        <div class="iconBox"><img src="./images/icons/tiles.png" class="iconImage"><span class="iconLabel">Tiles</span></div>
+      </div>
+     
+      <div class="swiper-slide iconSlide">
+        <div class="iconBox"><img src="./images/icons/SANITARY WARES.jpg" class="iconImage"><span class="iconLabel">SANITARY WARES</span></div>
+      </div>
+      <div class="swiper-slide iconSlide">
+        <div class="iconBox"><img src="./images/icons/parking.png" class="iconImage"><span class="iconLabel">Floor</span></div>
+      </div>
+      <div class="swiper-slide iconSlide">
+        <div class="iconBox"><img src="./images/icons/FAUCETS.png" class="iconImage"><span class="iconLabel">FAUCETS</span></div>
+      </div>
+    </div>
+  </div> --> 
+
+
+
+<!-- section 1 -->
+ <section class="hero-slider">
+  <div class="swiper heroSwiper">
+    <!-- Slides -->
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image: url('./images/nav2.avif');">
+        <div class="slide-content">
+          <h2 class="slide-title" style="color: rgb(0, 0, 0);">Premium Tiles & Ceramics</h2>
+          <h4 class="slide-subtitle" style="color: rgb(0, 0, 0);">Transform Your Space with Style</h4>
+        </div>
+      </div>
+      <div class="swiper-slide" style="background-image: url('./images/nav1.avif');">
+        <div class="slide-content">
+          <h2 class="slide-title">Elegant Flooring Solutions</h2>
+          <h4 class="slide-subtitle">For Residential & Commercial Projects</h4>
+        </div>
+      </div>
+      <div class="swiper-slide" style="background-image: url('./images/nav3.jpg');">
+        <div class="slide-content">
+          <h2 class="slide-title" >Mubarak Ceramics & Granites</h2>
+          <h4 class="slide-subtitle">Quality & Durability You Can Trust</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<!-- service -->
+<section class="service-journey-section" id="services-id">
+  <div class="container">
+    <h2 class="section-title">Our Service Journey</h2>
+    <p class="section-subtitle">
+      From selecting the perfect tiles at our showroom to completing the work at your site, we ensure a smooth and professional experience.
+    </p>
+
+    <div class="journey-cards">
+      <div class="journey-card">
+        <img src="./images/service/showroom.jpeg" alt="Showroom Visit">
+        <h3>Showroom Visit</h3>
+        <p>Explore our wide range of tiles and ceramics to choose the best match for your space.</p>
+      </div>
+      <div class="journey-card">
+        <img src="./images/service/site.jpg" alt="Site Visit">
+        <h3>Site Visit</h3>
+        <p>Our team visits your site to measure, plan, and finalize the work layout accurately.</p>
+      </div>
+      <div class="journey-card">
+        <img src="./images/service/install.jpg" alt="Installation">
+        <h3>Installation</h3>
+        <p>We handle the complete installation process efficiently and professionally.</p>
+      </div>
+      <div class="journey-card">
+        <img src="./images/service/handover.webp" alt="Handover">
+        <h3>Handover</h3>
+        <p>After quality checks, we hand over the completed project, ensuring your satisfaction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- section 4 -->
+<section class="showroom-section">
+  <div class="container">
+    <div class="showroom-content">
+      <!-- Left: Image/Video Carousel -->
+      <div class="showroom-media">
+        <video src="./images/videos/work.mp4" autoplay muted loop playsinline></video>
+      </div>
+      
+      <!-- Right: Text Content -->
+      <div class="showroom-text">
+        <h2>Experience Our Showroom & Expert Guidance</h2>
+        <p>
+          Visit our Chikkaballapur showrooms to explore our curated selection of tiles and ceramics. Our experts guide you in selecting the perfect design, texture, and finish for your space. 
+        </p>
+        <p>
+          Once your selection is made, we personally accompany you to your site to ensure a seamless fit and help visualize the final installation. Trust us to turn your ideas into stunning interiors.
+        </p>
+        <a href="#contact" class="btn btn-primary">Book a Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--   section 2 -->
+<section class="about-section py-5 bg-light" id="about-uss">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Left: Text -->
+      <div class="col-lg-6">
+        <h2 class="section-title">
+          Looking for the <span style="color: #007bff; font-weight: 600;">best tiles</span> in 
+          <span style="color: #007bff; font-weight: 600;">Bangalore</span>?
+        </h2>
+        <p class="section-subtitle">
+          Explore premium floor and wall tiles that combine style, durability, and elegance for your home or business.
+        </p>
+        <p class="section-text">
+          Mubarak Ceramics & Granites, with locations in Chikkaballapur, offers a premium range of floor and wall tiles, ceramics, and bathroom fixtures for both residential and commercial spaces.
+        </p>
+        <p class="section-text">
+          We provide high-quality, stylish, and durable products designed to meet diverse aesthetic and functional needs, ensuring exceptional customer experience and lasting interiors.
+        </p>
+        <p class="section-text">
+          Trust Mubarak Ceramics & Granites for expert guidance and top-notch products that transform spaces with elegance and sophistication.
+        </p>
+      </div>
+
+      <!-- Right: Video -->
+      <div class="col-lg-6 text-center">
+        <video autoplay muted loop playsinline class="about-video">
+          <source src="./images/videos/111.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- cardsss -->
+<section class="cards-section">
+  <div class="container">
+    <h2 class="section-title">Our Featured Tiles</h2>
+    <div class="cards-wrapper">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="./images/tiles-img/eli.jpg" alt="Tile 1">
+            <h3>Elegant Tiles</h3>
+          </div>
+          <div class="card-back">
+            <p>Premium quality, perfect for modern interiors.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="./images/tiles-img/granite.avif" alt="Tile 2">
+            <h3>Granite</h3>
+          </div>
+          <div class="card-back">
+            <p>Durable and stylish, suitable for both floors and walls.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="./images/tiles-img/marble.avif" alt="Tile 3">
+            <h3>Marble</h3>
+          </div>
+          <div class="card-back">
+            <p>Luxury marble designs for elegant interiors.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="./images/tiles-img/floor.jpg" alt="Tile 4">
+            <h3>Floor Tiles</h3>
+          </div>
+          <div class="card-back">
+            <p>High-quality tiles for durable and stylish floors.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="./images/tiles-img/wall.jpg" alt="Tile 5">
+            <h3>Wall Tiles</h3>
+          </div>
+          <div class="card-back">
+            <p>Decorative tiles for unique wall designs.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="./images/tiles-img/bathroom.jpg" alt="Tile 6">
+            <h3>Bathroom Tiles</h3>
+          </div>
+          <div class="card-back">
+            <p>Elegant designs for bathrooms and wet areas.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="./images/tiles-img/outdoor.jpg" alt="Tile 7">
+            <h3>Outdoor Tiles</h3>
+          </div>
+          <div class="card-back">
+            <p>Durable outdoor tiles that withstand the elements.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="./images/tiles-img/decorative.avif" alt="Tile 8">
+            <h3>Decorative Tiles</h3>
+          </div>
+          <div class="card-back">
+            <p>Add artistic flair to your interiors with our decorative tiles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <a href="#contact" class="btn btn-primary">Get Quote</a>
+</section>
+
+
+<!-- our works -->
+<!-- Our Works Section -->
+<section class="our-works-section" id="works-id">
+  <div class="container">
+    <h2 class="section-title">Our Works</h2>
+    <div class="works-grid">
+      <!-- Video Card 1 -->
+      <div class="video-card">
+        <video src="./images/videos/video_20250915_221513.mp4" autoplay muted loop></video>
+       
+      </div>
+      <!-- Video Card 2 -->
+      <div class="video-card">
+        <video src="./images/videos/video_20250915_222336.mp4" autoplay muted loop></video>
+       
+      </div>
+      <!-- Video Card 3 -->
+      <div class="video-card">
+        <video src="./images/videos/4.mov" autoplay muted loop></video>
+        
+      </div>
+      <!-- Video Card 4 -->
+      <div class="video-card">
+        <video src="./images/videos/5.mov" autoplay muted loop></video>
+       
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- contact -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="section-subtitle">
+      Have questions or want to visit our showroom? Fill out the form and we'll get back to you shortly.
+    </p>
+
+    <div class="contact-wrapper">
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h3>Contact Details</h3>
+        <p><strong>Address:</strong> Chikkaballapur, Bangalore</p>
+        <p><strong>Phone:</strong> +91-98765 43210</p>
+        <p><strong>Email:</strong> mubarakgroup001@gmail.com</p>
+      </div>
+
+      <!-- Contact Form with Web3Forms Integration -->
+      <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" class="contact-form">
+        
+        <!-- Replace with your Access Key -->
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Your Phone" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <!-- Honeypot Spam Protection -->
+        <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+
+        <!-- Optional Redirect After Success -->
+        <!-- <input type="hidden" name="redirect" value="https://yourwebsite.com/thankyou.html"> -->
+
+        <button type="submit">Send Message</button>
+        <p class="form-message"></p>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Column 1: Logo & About -->
+    <div class="footer-col">
+      <h3 class="footer-logo">Mubarak Ceramics</h3>
+      <p>Providing premium tiles, ceramics, and bathroom fittings in Bangalore and Chikkaballapur. Transforming homes and businesses with style and durability.</p>
+    </div>
+
+    <!-- Column 2: Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about-uss">About Us</a></li>
+        <li><a href="#services-id">Our Services</a></li>
+        <li><a href="#works-id">Our Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Contact Info -->
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p><strong>Address:</strong> Chikkaballapur, Bangalore</p>
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <p><strong>Email:</strong> mubarakgroup001@gmail.com</p>
+    </div>
+
+    <!-- Column 4: Social Links -->
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-links">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/mubarak_ceramics_granites?igsh=MW0wYTMxYm1rY2locg=="><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    © 2025 Mubarak Ceramics & Granites. All Rights Reserved.
+  </div>
+</footer>
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const iconSwiper = new Swiper(".iconSwiperContainer", {
+      slidesPerView: 5,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: { delay: 0, disableOnInteraction: false },
+      speed: 2500,
+      allowTouchMove: false,
+      breakpoints: {
+        0: { slidesPerView: 2 },
+        576: { slidesPerView: 3 },
+        768: { slidesPerView: 4 },
+        992: { slidesPerView: 5 },
+      }
+    });
+
+
+const heroSwiper = new Swiper(".heroSwiper", {
+  speed: 1000,
+  loop: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  effect: 'slide',
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+  </script>
+</body>
+</html>
