@@ -325,129 +325,33 @@
   </div>
 </section>
 
-
-<!-- cardsss -->
 <section class="cards-section">
   <div class="container">
     <h2 class="section-title">Our Featured Tiles</h2>
-    <div class="cards-wrapper">
-      
-      <!-- Card 1 -->
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="./images/tiles-img/eli.jpg" alt="Tile 1">
-            <h3>Elegant Tiles</h3>
-          </div>
-          <div class="card-back">
-            <p>Premium quality, perfect for modern interiors.</p>
-            <a href="#contact" class="btn-card">View More</a>
+    
+    <div class="all-tiles-block" onclick="this.classList.toggle('flipped')">
+      <div class="all-tiles-inner">
+        
+        <!-- Front Side -->
+        <div class="all-tiles-front">
+          <img src="./images/tiles-img/floor.jpg" alt="All Tiles">
+          <div class="overlay">
+            <h3>All Tiles</h3>
+            <span class="flip-hint">⇧ Tap to Flip</span>
           </div>
         </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="./images/tiles-img/granite.avif" alt="Tile 2">
-            <h3>Granite</h3>
-          </div>
-          <div class="card-back">
-            <p>Durable and stylish, suitable for both floors and walls.</p>
-            <a href="#contact" class="btn-card">View More</a>
-          </div>
+        
+        <!-- Back Side -->
+        <div class="all-tiles-back">
+          <h3>Explore All Tiles</h3>
+          <p>Browse our complete collection of premium tiles.</p>
+          <a href="all-tiles.html" class="btn-view">View More</a>
         </div>
+        
       </div>
-
-      <!-- Card 3 -->
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="./images/tiles-img/marble.avif" alt="Tile 3">
-            <h3>Marble</h3>
-          </div>
-          <div class="card-back">
-            <p>Luxury marble designs for elegant interiors.</p>
-            <a href="#contact" class="btn-card">View More</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="./images/tiles-img/floor.jpg" alt="Tile 4">
-            <h3>Floor Tiles</h3>
-          </div>
-          <div class="card-back">
-            <p>High-quality tiles for durable and stylish floors.</p>
-            <a href="#contact" class="btn-card">View More</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="./images/tiles-img/wall.jpg" alt="Tile 5">
-            <h3>Wall Tiles</h3>
-          </div>
-          <div class="card-back">
-            <p>Decorative tiles for unique wall designs.</p>
-            <a href="#contact" class="btn-card">View More</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="./images/tiles-img/bathroom.jpg" alt="Tile 6">
-            <h3>Bathroom Tiles</h3>
-          </div>
-          <div class="card-back">
-            <p>Elegant designs for bathrooms and wet areas.</p>
-            <a href="#contact" class="btn-card">View More</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 7 -->
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="./images/tiles-img/outdoor.jpg" alt="Tile 7">
-            <h3>Outdoor Tiles</h3>
-          </div>
-          <div class="card-back">
-            <p>Durable outdoor tiles that withstand the elements.</p>
-            <a href="#contact" class="btn-card">View More</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 8 -->
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="./images/tiles-img/decorative.avif" alt="Tile 8">
-            <h3>Decorative Tiles</h3>
-          </div>
-          <div class="card-back">
-            <p>Add artistic flair to your interiors with our decorative tiles.</p>
-            <a href="#contact" class="btn-card">View More</a>
-          </div>
-        </div>
-      </div>
-
     </div>
+    
   </div>
-  <br>
-  <a href="#contact" class="btn btn-primary">Get Quote</a>
 </section>
 
 
@@ -503,7 +407,7 @@
       <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" class="contact-form" style="background-image: url(./images/tiles-img/david.jpg);">
         
         <!-- Replace with your Access Key -->
-        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+        <input type="hidden" name="access_key" value="d6ca701e-0522-445b-ac86-651467a9ecdf">
 
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
@@ -522,6 +426,9 @@
     </div>
   </div>
 </section>
+
+
+
 <!-- Footer -->
 <footer class="footer">
   <div class="footer-container">
