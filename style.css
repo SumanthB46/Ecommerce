@@ -351,6 +351,68 @@ section 4 */
 }
 
 
+/* Base Flip Card */
+.all-tiles-block {
+  perspective: 1200px;
+  width: 100%;
+  max-width: 900px;
+  height: 400px;
+  margin: 30px auto;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Tablet Responsiveness */
+@media (max-width: 992px) {
+  .all-tiles-block {
+    max-width: 700px;
+    height: 350px;
+  }
+
+  .overlay h3,
+  .all-tiles-back h3 {
+    font-size: 1.8rem;
+  }
+
+  .all-tiles-back p {
+    font-size: 1rem;
+  }
+
+  .btn-view {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 576px) {
+  .all-tiles-block {
+    max-width: 100%;
+    height: 280px;
+    margin: 20px auto;
+  }
+
+  .overlay h3,
+  .all-tiles-back h3 {
+    font-size: 1.4rem;
+  }
+
+  .all-tiles-back p {
+    font-size: 0.9rem;
+  }
+
+  .btn-view {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .flip-hint {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
+
 
 /* Our Works Section */
 .our-works-section {
