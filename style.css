@@ -568,6 +568,7 @@ section 4 */
 
 
 /*--------------------- contact---------------------------- */
+/* ---------------- CONTACT SECTION ---------------- */
 .contact-section {
   padding: 80px 20px;
   background: linear-gradient(135deg, #f8f9fa, #e9ecef);
@@ -575,28 +576,33 @@ section 4 */
 }
 
 .contact-section .section-title {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 700;
   color: #212529;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   position: relative;
   display: inline-block;
+  letter-spacing: 0.5px;
 }
 
 .contact-section .section-title::after {
   content: "";
   display: block;
-  width: 60px;
+  width: 70px;
   height: 3px;
   background: #007bff;
-  margin: 8px auto 0;
+  margin: 10px auto 0;
   border-radius: 2px;
 }
 
 .contact-section .section-subtitle {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: #6c757d;
   margin-bottom: 50px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
 }
 
 .contact-wrapper {
@@ -604,30 +610,34 @@ section 4 */
   justify-content: space-between;
   gap: 50px;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: stretch;
 }
 
-/* --- Contact Info with Background Image --- */
+/* ---------------- Contact Info ---------------- */
 .contact-info {
   flex: 1 1 40%;
   text-align: left;
   font-weight: 400;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   background: url("./images/tiles-img/olg.jpg") center/cover no-repeat;
   color: #fff;
   overflow: hidden;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contact-info::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55); /* dark overlay */
-  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.55); 
+  border-radius: 14px;
   z-index: 1;
 }
 
@@ -637,44 +647,46 @@ section 4 */
 }
 
 .contact-info:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.2);
 }
 
 .contact-info h3 {
-  font-size: 1.6rem;
-  color: #ffc107; /* golden for highlight */
+  font-size: 1.7rem;
+  color: #ffc107;
   margin-bottom: 20px;
 }
 
 .contact-info p {
   font-size: 1rem;
   color: #f8f9fa;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   line-height: 1.6;
 }
 
-/* --- Contact Form with Background Image --- */
+/* ---------------- Contact Form ---------------- */
 .contact-form {
   flex: 1 1 55%;
   display: flex;
   flex-direction: column;
   gap: 18px;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   background: url("./images/tiles-img/david.jpg") center/cover no-repeat;
   overflow: hidden;
+  min-height: 300px;
 }
 
 .contact-form::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.78); /* light overlay for readability */
-  backdrop-filter: blur(3px);
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(4px);
+  border-radius: 14px;
   z-index: 1;
 }
 
@@ -686,18 +698,19 @@ section 4 */
 }
 
 .contact-form:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 14px 16px;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1px solid #ced4da;
   font-size: 1rem;
   resize: none;
-  background: #fdfdfd;
+  background: #fff;
   transition: all 0.3s ease;
 }
 
@@ -706,14 +719,13 @@ section 4 */
   border-color: #007bff;
   box-shadow: 0 0 8px rgba(0,123,255,0.25);
   outline: none;
-  background: #fff;
 }
 
 .contact-form button {
   padding: 14px 20px;
   border: none;
-  border-radius: 8px;
-  background: #007bff;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
   color: #fff;
   font-size: 1rem;
   font-weight: 600;
@@ -722,11 +734,12 @@ section 4 */
 }
 
 .contact-form button:hover {
-  background: #0056b3;
+  background: linear-gradient(135deg, #0056b3, #003f88);
   transform: translateY(-2px);
   box-shadow: 0 6px 14px rgba(0,123,255,0.3);
 }
 
+/* ---------------- Form Message ---------------- */
 .form-message {
   font-size: 0.95rem;
   margin-top: 10px;
@@ -744,17 +757,18 @@ section 4 */
   display: block;
 }
 
-/* --- Responsive --- */
-/* --- Responsive Enhancements --- */
+/* ---------------- Responsive ---------------- */
+
+/* Tablets */
 @media (max-width: 992px) {
   .contact-section {
     padding: 60px 15px;
   }
   .contact-section .section-title {
-    font-size: 1.9rem;
+    font-size: 2rem;
   }
   .contact-section .section-subtitle {
-    font-size: 0.95rem;
+    font-size: 1rem;
     margin-bottom: 40px;
   }
   .contact-wrapper {
@@ -762,6 +776,7 @@ section 4 */
   }
 }
 
+/* Tablets & Small Laptops */
 @media (max-width: 780px) {
   .contact-wrapper {
     flex-direction: column;
@@ -772,17 +787,17 @@ section 4 */
   .contact-form {
     flex: 1 1 100%;
     text-align: center;
-    padding: 20px;
+    padding: 22px;
   }
 
   .contact-info h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-bottom: 15px;
   }
 
   .contact-info p {
     font-size: 0.95rem;
-    line-height: 1.4;
+    line-height: 1.5;
   }
 
   .contact-form input,
@@ -797,21 +812,22 @@ section 4 */
   }
 }
 
+/* Mobile */
 @media (max-width: 480px) {
   .contact-section {
-    padding: 50px 10px;
+    padding: 50px 12px;
   }
   .contact-section .section-title {
     font-size: 1.6rem;
   }
   .contact-section .section-subtitle {
     font-size: 0.9rem;
-    margin-bottom: 30px;
-    padding: 0 5px;
+    margin-bottom: 28px;
+    padding: 0 8px;
   }
   .contact-info, 
   .contact-form {
-    padding: 15px;
+    padding: 16px;
     border-radius: 10px;
   }
   .contact-form input,
@@ -820,7 +836,7 @@ section 4 */
     padding: 10px 12px;
   }
   .contact-form button {
-    width: 100%; /* full-width button for touch */
+    width: 100%; /* full width for thumb tap */
     font-size: 0.9rem;
     padding: 12px;
   }
